@@ -17,9 +17,9 @@ Do the following:
 
    HINT: no function required
 */
+var votingAge = 18;
 
-
-
+console.log ('true', votingAge >= 18)
 /*
 Task 1b - Values
 
@@ -48,7 +48,6 @@ Do the following:
 
 
 
-
 /*
 Task 1d - Multiply
  
@@ -74,9 +73,11 @@ Do the following:
    3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
+function dogYears( age ){
+  return (age * 7);
     /*add your code here*/
 }
+console.log(6);
 
 
 
@@ -106,10 +107,31 @@ Use the hungryDog function and feeding requirements below to do the following:
     
   NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
-
-function hungryDog(/*add your code here*/){
-    /*add your code here*/
+function hungryDog( weight, age){
+  if(age >= 1 && weight <= 5){
+    return (weight * 0.05);
   }
+  else if(age >= 1 && weight >= 6 && weight <= 10){
+    return(weight * 0.04);
+  }
+  else if(age >= 1 && weight >= 11 && weight <= 15){
+    return(weight * 0.03);
+  }
+  else if(age >= 1 && weight > 15){
+    return(weight * 0.02);
+  }
+  else if(age < 1 && age >= .583){
+    return(weight * 0.04);
+  }
+  else if(age < .583 && age >= .250){
+    return(weight * 0.05);
+  }
+  else(age < .250 && age >= .166);{
+    return (weight * .1);
+  }
+}
+console.log(15, 1);
+
 
 
 
@@ -201,10 +223,25 @@ Using the grade function below do the following:
    below should return 'you got an F'
 */
   
-function grade(/*Your Code here */){
-  /*Your Code here */
+function grade(score){
+  if( score >= 90 && score <= 100){
+    return ('you got an A');
   }
-  
+  else if(score >= 80 && score <= 89){
+    return ('you got a B');
+  }
+  else if(score >= 70 && score <= 79){
+    return ('you got a C');
+  }
+  else if(score >= 60 && score <= 69){
+    return ('you got a D');
+  }
+  else(score <=59);{
+    return ('you got an F')
+  }
+
+  }
+  console.log(100)
   
 
 /*💪💪💪💪💪💪💪💪💪💪 Stretch 💪💪💪💪💪💪💪💪💪💪*/
